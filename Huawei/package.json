@@ -1,0 +1,36 @@
+{
+  "name": "etl-template-js",
+  "version": "1.0.0",
+  "main": "./src/app.ts",
+  "scripts": {
+    "build": "tsc && pkg . --out-path build",
+    "tsc": "tsc",
+    "start": "ts-node ./src/app.ts",
+    "pkg": "pkg . --out-path build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/testapp.ts"
+  },
+  "bin": "./dist/app.js",
+  "pkg": {
+    "scripts": [
+      "dist/**/*.js"
+    ],
+    "targets": [
+      "node18-linux-x64",
+      "node18-win-x64"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "pkg": "^5.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "superagent": "^10.2.3",
+    "tough-cookie": "^5.1.2"
+  }
+}
