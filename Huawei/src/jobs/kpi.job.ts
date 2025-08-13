@@ -2,12 +2,10 @@
 import { ServiceKpiRealtime } from '../services/realtimekpi.service';
 import { returnVariable } from '../utils/returnVariable';
 
-export async function runKpiJob() {
+export async function runKpiJob(devIds) {
 
 
-  try {
-    // devIds podría venir desde params o desde config
-    const devIds = "1000000033663109,1000000033662647";
+  try {;
 
     const apiRes = await ServiceKpiRealtime (devIds);
     console.log('[KPI job] OK', apiRes);
