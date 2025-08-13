@@ -31,11 +31,11 @@ export async function insertKpi(devices: Array<{ devId: string, dataItemMap: Rec
     const k = device.dataItemMap ?? {};
 
     const temperature    = k.temperature ?? null;
-    const active_power   = k.active_power ?? k.activePower ?? null;
-    const reactive_power = k.reactive_power ?? k.reactivePower ?? null;
-    const efficiency     = k.efficiency ?? null;
-    const power_factor   = k.power_factor ?? k.powerFactor ?? null;
-    const day_cap        = k.day_cap ?? k.dayCap ?? null;
+    const active_power   = k.active_power ?? k.activePower ?? 0;
+    const reactive_power = k.reactive_power ?? k.reactivePower ?? 0;
+    const efficiency     = k.efficiency ?? 0;
+    const power_factor   = k.power_factor ?? k.powerFactor ?? 0;
+    const day_cap        = k.day_cap ?? k.dayCap ?? 0;
     const total_cap      = k.total_cap ?? k.totalCap ?? null;
 
     const extra = { ...k };
